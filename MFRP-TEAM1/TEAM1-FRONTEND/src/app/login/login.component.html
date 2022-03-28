@@ -1,0 +1,15 @@
+<div class="background d-flex flex-row justify-content-center">
+    <div class="background d-flex flex-row justify-content-center">
+        <form>
+            <label for="email"><strong>EmailAdress : </strong></label><br>
+            <input type="email" name="EmailAdress" #EmailAdress placeholder="EmailAdress" id="EmailAdress"><br>
+            <hr>
+            <label for="Password"><strong>Password : </strong></label><br>
+            <input type="Password" name="Password" #Password placeholder="Password" id="Password">
+            <hr>
+            <button class="btn btn-success" type="submit" (click)="Email(EmailAdress.value,Password.value) "
+                (click)="login()" routerLink="/app-frontpart">LOGIN</button> &nbsp;
+            <button class="btn btn-danger pr-10" routerLink="/app-register">NEW REGISTER</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+.top-part{
+    background-color: rgb(100, 2, 40);
+    justify-content: space-evenly;
+    width: 100%;
+}
+ .row1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; 
+} 
+.shadow{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.item img {
+    width: 100%;
+    margin-top: 20px;
+}
+.item {
+    margin: 0px 15px;
+    text-align: center;
+}
+
+.item a:hover {
+    color: rgb(5, 5, 75);
+}
+
+.card {
+    padding: 20px;
+    margin: 50px;
+    width:70%;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+}
+.card img:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+} 
+.button{
+    background-color: rgb(3, 85, 85);
+    color:aliceblue;
+    background-size: cover;
+    border-radius: 5px;
+    padding:5px;
+    margin:5px;
+}
+.title{
+    font-weight: bold;
+    font-size: medium;
+    color: aliceblue;
+}

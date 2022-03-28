@@ -1,0 +1,98 @@
+<ng-container *ngIf="products.length !=0">
+    <div class="container">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>Product Name</th>
+                            <th>Product Image</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of products; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{item.title}}</td>
+                            <td><img style="width: 120px;" src="{{item.image}}" alt=""></td>
+                            <td style="width: 25%;">{{item.description}}</td>
+                            <th style="width: 12%;">{{item.price}}</th>
+                            <td style="width: 12%;">{{item.quantity}}</td>
+                            <td style="width: 12%;">{{item.total}}</td>
+                            <td> <button (click)="removeItem(item)" class="btn btn-danger">Delete </button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="d-flex flex-row justify-content-between"></td>
+                            <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
+                            <td><button routerLink="/app-products" class="btn btn-primary">Shop More</button></td>
+                            <td><button routerLink="/home" class="btn btn-success">Checkout</button></td>
+                            <td><strong>Grand Total : ${{grandTotal}}</strong></td>
+                            <td>
+                                <button onclick="document.getElementById('id01').style.display='block'"
+                                    class="btn btn-success" style="width:auto;text-align: center;">Place Order</button>
+                                <div id="id01" class="modal">
+                                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                                        title="Close Modal">&times;</span>
+                                    <form class="modal-content" action="/action_page.php">
+                                        <div class="container">
+                                            <h1>Payment Methods</h1>
+                                            <hr>
+                                            <label>
+                                                <input type="radio" checked="checked" name="remember"
+                                                    style="margin-bottom:15px;"> UPI<br>
+                                                <input type="radio" checked="checked" name="remember"
+                                                    style="margin-bottom:15px"> Wallets<br>
+                                                <input type="radio" checked="checked" name="remember"
+                                                    style="margin-bottom:15px"> Credit/Debit/ATM Card<br>
+                                                <input type="radio" checked="checked" name="remember"
+                                                    style="margin-bottom:15px"> Net Banking<br>
+                                                <input type="radio" checked="checked" name="remember"
+                                                    style="margin-bottom:15px"> Cash on delivery<br>
+                                            </label>
+                                            <div class="clearfix d-flex flex-row">
+                                                <button type="button"
+                                                    onclick="document.getElementById('id01').style.display='none'"
+                                                    class="cancelbtn">CANCEL</button>
+                                                <button routerLink="/app-frontpart"
+                                                    (click)="successNotification()">CONFIRM</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <script>
+                                    var modal = document.getElementById('id01');
+                                    window.onclick = function (event) {
+                                        if (event.target == modal) {
+                                            modal.style.display = "none";
+                                        }
+                                    }
+                                </script>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</ng-container>
+<ng-container *ngIf="products.length ==0">
+    <div class="container">
+        <div class="card">
+            <!-- <h5 class="card-title">My Cart</h5> -->
+
+            <div class="center">
+                <img src="https://cdn.eduonix.com/assets/images/empty_cart.png" alt="">
+                <h4>Your cart is empty!</h4>
+                <h6>Add item to it now</h6>
+                <button routerLink="/app-products" class="btn btn-primary">Shop Now</button>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<router-outlet></router-outlet>

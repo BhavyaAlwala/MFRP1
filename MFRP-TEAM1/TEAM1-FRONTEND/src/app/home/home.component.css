@@ -1,0 +1,32 @@
+.background{
+background-image: linear-gradient(#10296e, #964641, #577f86, #8993ac);
+padding:30px;
+}
+    form{
+    width: 500px;
+    background-color: rgb(55, 187, 204);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    border-radius: 10px;
+   
+    }
+    form input{
+    width: 90%;
+    margin-bottom: 1%;
+    margin-left: 20px;
+    padding:10px;
+    border-radius: 10px;
+    }
+    form button{
+    width: 90%;
+    margin-left: 20px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    }
+    form label{
+    color: black;
+    margin-left: 20px;
+    padding-top: 10px;
+    }

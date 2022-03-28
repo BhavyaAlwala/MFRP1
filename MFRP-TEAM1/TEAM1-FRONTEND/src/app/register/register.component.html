@@ -1,0 +1,23 @@
+<div class="background d-flex flex-row justify-content-center">
+<form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+<label for="name">Full Name : </label><br>
+<input type="FullName" name="FullName" ngModel placeholder="FullName" id="FullName"><br>
+<hr>
+<label for="name">UserName : </label><br>
+<input type="UserName" name="UserName" ngModel placeholder="UserName" id="UserName"><br>
+<hr>
+<label for="name">EmailAdress : </label><br>
+<input type="email" name="EmailAdress" ngModel placeholder="EmailAdress" id="EmailAdress"><br>
+<hr>
+<label for="name">Password : </label><br>
+<input type="Password" name="Password" ngModel placeholder="Password" id="Password"><br>
+<hr>
+<label for="name">ConfirmPassword : </label><br>
+<input type="Password" name="ConfirmPassword" ngModel placeholder="ConfirmPassword" id="ConfirmPassword"><br>
+<hr>
+<div class="d-flex flex-row justify-content-between">
+<button class="btn btn-primary"  (click)="Reg()" type="submit">REGISTER</button>
+<button class="btn btn-primary" routerLink="/app-login" type="submit">LOGIN</button>
+</div>
+</form>
+</div>

@@ -1,0 +1,17 @@
+.background{
+    background-color: rgb(243, 232, 217);
+    color: rgb(2, 38, 70); 
+}
+form{
+    background-color: rgb(124, 10, 73);
+    width:300px;
+   padding:30px;
+   margin:30px;
+   color:aliceblue;
+   border-radius:10px;
+}
+input{
+    width:240px;
+    border-radius:5px;
+    height:40px;
+}

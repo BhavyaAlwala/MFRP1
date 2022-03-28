@@ -1,0 +1,31 @@
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show">
+    <strong>success !</strong> your data has been updated successfully.
+    </div>
+    <form [formGroup]="editEmp" (ngSubmit)="submission()" >
+    <div class="form-group">
+    <label for="firstName">FIRST-NAME :</label><br>
+    <input type="text" formControlName="firstName" placeholder="firstName" id="firstName">
+    </div>
+    <div class="form-group">
+    <label for="lastName">LAST-NAME :</label><br>
+    <input type="text" formControlName="lastName" placeholder="lastName" id="lastName">
+    </div>
+    <div class="form-group">
+    <label for="address">ADDRESS:</label><br>
+    <input type="text" formControlName="address" placeholder="address" id="address">
+    </div>
+    <div class="form-group">
+    <label for="phoneNumber">PHONE NUMBER :</label><br>
+    <input type="text" formControlName="phoneNumber" placeholder="phoneNumber" id="phoneNumber">
+    </div>
+    <div class="form-group">
+    <label for="location">LOCATION :</label><br>
+    <input type="text" formControlName="location" placeholder="location" id="location">
+    </div>
+    <!-- <div class="form-group">
+    <label for="employeeId">POSTAL CODE :</label><br>
+    <input type="text" formControlName="employeeId" placeholder="postal code" id="employeeId">
+    </div> -->
+    <button type="submit">update</button>
+    </form>
+    

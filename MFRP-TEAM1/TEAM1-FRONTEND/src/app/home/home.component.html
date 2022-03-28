@@ -1,0 +1,37 @@
+<div class="background">
+    <form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+        <label for="firstName">FIRST NAME :</label><br>
+        <input type="text" name="firstName" ngModel placeholder="first-Name" id="firstName"><br>
+        <label for="lastName">LAST NAME :</label><br>
+        <input type="text" name="lastName" ngModel placeholder="lastName" id="lastName"><br>
+        <label for="address">ADDRESS :</label><br>
+        <input type="text" name="address" ngModel placeholder="address" id="address"><br>
+        <label for="phoneNumber">phoneNumber :</label><br>
+        <input type="text" name="phoneNumber" ngModel placeholder="phoneNumber" id="phoneNumber"><br>
+        <label for="location">LOCATION :</label><br>
+        <input type="text" name="location" ngModel placeholder="location" id="location"><br>
+        <!-- <label for="employeeId">POSTAL CODE :</label><br>
+        <input type="text" name="employeeId" ngModel placeholder="postal code" id="employeeId"><br> -->
+        <button  class="btn btn-danger" type="submit">submit data</button>
+    </form>
+    <div class="text-center">
+        <a *ngFor="let obj of response |async">
+           
+            <h1><strong>FirstName:</strong>{{obj.firstName}}</h1>
+            <h1><strong>LastName:</strong>{{obj.lastName}}</h1>
+            <h1><strong>Address:</strong>{{obj.address}}</h1>
+            <h1><strong>PhoneNumber:</strong>{{obj.phoneNumber}}</h1>
+            <h1><strong>Location:</strong>{{obj.location}}</h1>
+            
+            <h1><i (click)="deleteProduct(obj.employeeId)" 
+                    style="font-size:20px;color:red;">Delete</i>
+                <a routerLink="/formTable/{{obj._id}}">
+                    <i  style="font-size:20px;color:blue;">Edit</i>
+                </a>
+            </h1>
+        </a>
+        <div class="d-flex flex-row justify-content-center">
+        <button routerLink="/cart" class=" btn btn-primary nav-link active">Back to Cart</button>
+        </div>
+    </div>
+</div>

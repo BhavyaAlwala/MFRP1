@@ -1,0 +1,206 @@
+<div class="top-part d-flex flex-row justify-content-between ">
+    <div class="item">
+        <a (click)="filter('')">
+            <img src="https://img.freepik.com/free-vector/shopping-online-website-mobile-application-landing-page-concept-marketing-digital-marketing_144352-77.jpg?w=1060"
+                alt="">
+            <h1 class="title">All products</h1>
+        </a>
+    </div>
+    <div class="item">
+        <a (click)="filter('electronics')">
+            <img src="https://img.freepik.com/free-psd/cyber-monday-sale-composition-mock-up_23-2148659811.jpg?w=1060"
+                alt="">
+            <h1 class="title">Electronics</h1>
+        </a>
+    </div>
+    <div class="item">
+        <a (click)="filter('fashion')">
+            <img src="https://img.freepik.com/free-photo/pretty-girls-exploring-shops-mall_23-2147669973.jpg?w=996"
+                alt="">
+            <h1 class="title">Fashion</h1>
+        </a>
+    </div>
+    <div class="item">
+        <a (click)="filter('jewelery')">
+            <img src="https://img.freepik.com/free-vector/realistic-necklaces-jewelry-accessories-icons-set_100011-419.jpg?w=900"
+                alt="">
+            <h1 class="title">Jewellery</h1>
+        </a>
+    </div>
+    <div class="item">
+        <a (click)="filter('footware')">
+            <img src="https://as1.ftcdn.net/v2/jpg/02/68/77/32/1000_F_268773201_wCVuHq5nHp7d8eKa8N0U0VzHyRixQdAC.jpg"
+                alt="">
+            <h1 class="title">Footware</h1>
+        </a>
+    </div>
+    <div class="item">
+        <a (click)="filter('Beauty')">
+            <img src="https://as1.ftcdn.net/v2/jpg/02/36/46/72/1000_F_236467282_mGsVTQXQPd5Yo7lKCaeSkyFSLpZjSzg4.jpg"
+                alt="">
+            <h1 class="title">Beauty</h1>
+        </a>
+    </div>
+</div>
+<div class="container buttom-part">
+    <div class="row1">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div *ngIf="item.id<=4">
+                <div class="card shadow">
+                    <img src="{{item.image}}" alt="">
+                    <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{item.title}}</h5>
+                    <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{item.description}}</p>
+                    <p><strong>Price:</strong> ${{item.price}}</p>
+                    <div class="d-flex flex-row justify-content-between">
+                        <button class="button" (click)=addtocart(item) routerLink="/cart">ADD TO CART</button>
+                        <button class="button" (click)=addtocart(item) routerLink="/wishlist">WISHLIST</button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<div class="container buttom-part">
+    <div class="row1 ml-10">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div *ngIf="item.id>4 && item.id<=8">
+                <div class="card shadow">
+                    <img src="{{item.image}}" alt="">
+                    <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{item.title}}</h5>
+                    <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{item.description}}</p>
+                    <p><strong>Price:</strong> ${{item.price}}</p>
+                    <div class="d-flex flex-row justify-content-between">
+                        <button class="button " (click)=addtocart(item)>ADD TO CART</button>
+                        <button class="button" (click)=addtocart(item) routerLink="/wishlist">WISHLIST</button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<div class="container buttom-part">
+    <div class="row1 ml-10">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div *ngIf="item.id>8 && item.id<=12">
+                <div class="card shadow">
+                    <img src="{{item.image}}" alt="">
+                    <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{item.title}}</h5>
+                    <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{item.description}}</p>
+                    <p><strong>Price:</strong> ${{item.price}}</p>
+                    <div class="d-flex flex-row justify-content-between">
+                        <button class="button " (click)=addtocart(item) routerLink="/cart">ADD TO CART</button>
+                        <button class="button" (click)=addtocart(item) routerLink="/wishlist">WISHLIST</button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<div class="container buttom-part">
+    <div class="row1 ml-10">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div *ngIf="item.id>12 && item.id<=16">
+                <div class="card shadow">
+                    <img src="{{item.image}}" alt="">
+                    <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{item.title}}</h5>
+                    <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{item.description}}</p>
+                    <p><strong>Price:</strong> ${{item.price}}</p>
+                    <div class="d-flex flex-row justify-content-between">
+                        <button class="button " (click)=addtocart(item) routerLink="/cart">ADD TO CART</button>
+                        <button class="button" (click)=addtocart(item) routerLink="/wishlist">WISHLIST</button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<div class="container buttom-part">
+    <div class="row1 ml-10">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div *ngIf="item.id>16 && item.id<=20">
+                <div class="card shadow">
+                    <img src="{{item.image}}" alt="">
+                    <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{item.title}}</h5>
+                    <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{item.description}}</p>
+                    <p><strong>Price:</strong> ${{item.price}}</p>
+                    <div class="d-flex flex-row justify-content-between">
+                        <button class="button " (click)=addtocart(item) routerLink="/cart">ADD TO CART</button>
+                        <button class="button" (click)=addtocart(item) routerLink="/wishlist">WISHLIST</button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<div class="container buttom-part">
+    <div class="row1 ml-10">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div *ngIf="item.id>20 && item.id<=24">
+                <div class="card shadow">
+                    <img src="{{item.image}}" alt="">
+                    <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{item.title}}</h5>
+                    <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{item.description}}</p>
+                    <p><strong>Price:</strong> ${{item.price}}</p>
+                    <div class="d-flex flex-row justify-content-between">
+                        <button class="button " (click)=addtocart(item) routerLink="/cart">ADD TO CART</button>
+                        <button class="button" (click)=addtocart(item) routerLink="/wishlist">WISHLIST</button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<div class="container buttom-part">
+    <div class="row1 ml-10">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div *ngIf="item.id>24 && item.id<=28">
+                <div class="card shadow">
+                    <img src="{{item.image}}" alt="">
+                    <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{item.title}}</h5>
+                    <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{item.description}}</p>
+                    <p><strong>Price:</strong> ${{item.price}}</p>
+                    <div class="d-flex flex-row justify-content-between">
+                        <button class="button " (click)=addtocart(item) routerLink="/cart">ADD TO CART</button>
+                        <button class="button" (click)=addtocart(item) routerLink="/wishlist">WISHLIST</button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<div class="container buttom-part">
+    <div class="row1 ml-10">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div *ngIf="item.id>28 && item.id<=32">
+                <div class="card shadow">
+                    <img src="{{item.image}}" alt="">
+                    <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{item.title}}</h5>
+                    <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{item.description}}</p>
+                    <p><strong>Price:</strong> ${{item.price}}</p>
+                    <div class="d-flex flex-row justify-content-between">
+                        <button class="button " (click)=addtocart(item) routerLink="/cart">ADD TO CART</button>
+                        <button class="button" (click)=addtocart(item) routerLink="/wishlist">WISHLIST</button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<div class="container buttom-part">
+    <div class="row1 ml-10">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div *ngIf="item.id>32 && item.id<=36">
+                <div class="card shadow">
+                    <img src="{{item.image}}" alt="">
+                    <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{item.title}}</h5>
+                    <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{item.description}}</p>
+                    <p><strong>Price:</strong> ${{item.price}}</p>
+                    <div class="d-flex flex-row justify-content-between">
+                        <button class="button " (click)=addtocart(item) routerLink="/cart">ADD TO CART</button>
+                        <button class="button" (click)=addtocart(item) routerLink="/wishlist">WISHLIST</button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

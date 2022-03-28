@@ -1,0 +1,155 @@
+<div class="navigation">
+
+  <nav class="navbar navbar-expand-md navbar-light  fixed-top">
+    <button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#nav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between" id="nav">
+
+      <a style="text-decoration: none; font-family: GEORGIA;font-style: italic; font-size: 34px;padding-right: 30px;"
+        mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon " class="text-white"><i
+          class="fab fa-slack"></i>ShopClues</a>
+
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+
+          <a routerLink="/app-frontpart" class="nav-link text-light font-weight-bold px-3" href="#">HOME</a>
+
+        </li>
+        <li class="nav-item">
+
+          <a routerLink="/app-products" class="nav-link text-light font-weight-bold px-3" href="#">ALL PRODUCTS</a>
+
+        </li>
+
+
+
+        <li class="nav-item">
+
+          <a routerLink="/cart" class="nav-link text-light font-weight-bold px-3" href="#">VIEW CART<button
+              class="badge btn-danger text-white">{{totalItem}}</button></a>
+
+        </li>
+
+        <li class="nav-item">
+
+          <a routerLink="/wishlist" class="nav-link text-light font-weight-bold px-3" href="#">WISHLIST<button
+              class="badge btn-danger text-white">{{totalItem}}</button></a>
+
+        </li>
+
+      </ul>
+
+
+      <!-- Search bar -->
+      <a style="text-decoration: none;"> <input type="text" class="form-control" style="height: 30px; width:100%;"
+          [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
+
+      </a>
+
+
+      <a class="nav-item dropdown" data-toggle="dropdown">
+
+        <a class="nav-link text-light font-weight-bold px-3 dropdown-toggle" href="#"> ACCOUNT</a>
+
+        <div class="dropdown-menu">
+
+          <a routerLink="/app-register" class="dropdown-item" href="#">Register</a>
+
+          <a routerLink="/app-login" class="dropdown-item" href="#">Login</a>
+
+        </div>
+
+      </a>
+
+
+    </div>
+
+  </nav>
+</div>
+
+
+
+
+
+
+<router-outlet></router-outlet>
+
+
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<footer>
+  <div class="content d-flex flex-column justify-content-end">
+    <div class="top">
+      <div class="logo-details">
+        <i class="fab fa-slack"></i>
+        <span class="logo_name">ShopClues</span>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="link-boxes">
+      <ul class="box">
+        <li class="link_name">ABOUT</li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Corporate Information</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">ShopClues Wholesale</a></li>
+        <li><a href="#">ShopClues Stories</a></li>
+      </ul>
+      <ul class="box">
+        <li class="link_name">HELP</li>
+        <li><a href="#">Payments</a></li>
+        <li><a href="#">Shipping</a></li>
+        <li><a href="#">Cancellation & Returns</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Report Infringent</a></li>
+      </ul>
+      <ul class="box">
+        <li class="link_name">POLICY</li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">Terms Of Use</a></li>
+        <li><a href="#">Security</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Sitemap</a></li>
+        <li><a href="#">EPR Compliance</a></li>
+      </ul>
+      <ul class="box">
+        <li class="link_name">TOP CATEGORIES</li>
+        <li><a href="#">Appliances</a></li>
+        <li><a href="#">Fashion</a></li>
+        <li><a href="#">Sports Shoes</a></li>
+        <li><a href="#">Formal Wear</a></li>
+        <li><a href="#">Jewellery</a></li>
+        <li><a href="#">Casual & Denim</a></li>
+      </ul>
+
+
+
+    </div>
+  </div>
+  <div class="bottom-details">
+    <div class="bottom_text">
+      <span class="copyright_text">Copyright © @Team1<a href="#"> ShopClues.</a>All rights reserved</span>
+      <span class="policy_terms">
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms & condition</a>
+      </span>
+    </div>
+  </div>
+</footer>
